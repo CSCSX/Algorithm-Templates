@@ -2,5 +2,6 @@
 #define HEAD_H
 
 #include "../Data-Structrue/DataStructure.h"
+#include "../Basic-Algorithm/Basic-Algorithm.h"
 
 #endif

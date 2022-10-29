@@ -3,10 +3,9 @@
 using namespace std;
 int main()
 {
-    MinHeap<int> heap(100);
-    for (int i=2; i<=100; i++) heap.insert(i);
-    int x;
-    heap.pop(x);
-    printf("%d\n", x);
+    int a[5] = {0, 3, 4, 6, 3};
+    int b[5];
+    counting_sort(a, 4, 10, b);
+    for (int i=1; i<=4; i++) printf("%d ", b[i]);
     return 0;
 }
