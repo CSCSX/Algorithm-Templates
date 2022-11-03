@@ -2,5 +2,6 @@
 #define BASIC_ALGORITHM_N
 
 #include "Sort/counting-sort/counting-sort.h"
+#include "Sort/radix-sort/radix-sort.h"
 
 #endif
