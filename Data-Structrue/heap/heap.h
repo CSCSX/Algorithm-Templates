@@ -64,7 +64,6 @@ void MinHeap<T>::siftDown(int start, int m)
         if (tmp < heap[j]) break;
         heap[i] = heap[j];
         i = j, j = 2 * i + 1;
-        tmp = heap[i];
     }
     heap[i] = tmp;
 }
@@ -78,7 +77,6 @@ void MinHeap<T>::siftUp(int start)
         if (tmp >= heap[j]) break;
         heap[i] = heap[j];
         i = j, j = (i - 1) / 2;
-        tmp = heap[i];
     }
     heap[i] = tmp;
 }
