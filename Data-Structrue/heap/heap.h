@@ -57,10 +57,11 @@ MinHeap<T>::MinHeap(T arr[], int n)
 template<class T>//向下调整
 void MinHeap<T>::siftDown(int start, int m)
 {
-    int i = start, j = 2 * i + 1, tmp = heap[i];
+    int i = start, j = 2 * i + 1;
+    T tmp = heap[i];
     while (j <= m)
     {
-        if (j < m && heap[j] > heap[j + 1]) j++;
+        if (j < m && heap[j + 1] < heap[j]) j++;
         if (tmp < heap[j]) break;
         heap[i] = heap[j];
         i = j, j = 2 * i + 1;
@@ -71,10 +72,11 @@ void MinHeap<T>::siftDown(int start, int m)
 template<class T>//向上调整
 void MinHeap<T>::siftUp(int start)
 {
-    int i = start, j = (i - 1) / 2, tmp = heap[i];
+    int i = start, j = (i - 1) / 2;
+    T tmp = heap[i];
     while (i)
     {
-        if (tmp >= heap[j]) break;
+        if (heap[j] < tmp) break;
         heap[i] = heap[j];
         i = j, j = (i - 1) / 2;
     }
